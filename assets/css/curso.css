@@ -1,0 +1,60 @@
+.curso {
+    background: #fdfdfd;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 5rem;
+    
+    
+}
+
+.curso__imagen {
+    width: auto;
+    height: 150px;
+}
+
+.curso__titulo {
+    font-size: 1.4375rem;
+}
+
+
+.curso__descripcion {
+    font-size: 1.1875rem;
+    line-height: 1.5;
+    text-align: justify;
+}
+
+.curso__contenido {
+    padding: 1rem;
+    
+}
+
+.curso__boton {
+    background: #23068d;
+    border: none;
+    border-radius: 5px;
+    color: #fdfdfd;
+    padding: 1rem;
+}
+
+
+
+@media screen and (min-width: 0) {
+    .curso {
+        margin-right: 1rem;
+        width: 100%;
+    }
+}
+
+@media screen and (min-width: 768px) {
+    .curso {
+        margin-right: 2.5rem;
+        width: calc(33% - 2.5rem);
+    }
+}
+
+@media screen and (min-width: 922px) {
+    .curso {
+        margin-right: 5rem;
+        width: calc(25% - 5rem);
+    }
+}

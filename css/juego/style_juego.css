@@ -1,0 +1,287 @@
+/* CSS Challenge Encriptador Grupo3 */
+
+body {
+  background-image:url("../../img/1.jpg"); 
+    background-position: center center;
+    background-repeat: no-repeat;
+  
+    /* La imagen se fija en la ventana de visualización para que la altura de la imagen no supere a la del contenido */
+  
+    background-attachment: fixed;
+  
+    /* La imagen de fondo se reescala automáticamente con el cambio del ancho de ventana del navegador */
+  
+    background-size: cover;
+  
+    /* Se muestra un color de fondo mientras se está cargando la imagen
+  
+    de fondo o si hay problemas para cargarla */
+  
+    background-color: black;
+  }
+  
+  .div-desaparece{
+   margin: 0 auto;
+  }
+  
+  .agregar-palabra{
+    text-align: center;
+    padding: 100px;
+  }
+  
+  
+  
+  .button , .button-nuevo,.button2,.button-salir {
+    display: inline-block;
+    text-align: center;
+    vertical-align: middle;
+    padding: 12px 100px;
+    border: 0px solid #3227b8;
+    border-radius: 15px;
+    background: #5e4aff;
+    background: -webkit-gradient(linear, left top, left bottom, from(#5e4aff), to(#3227b8));
+    background: -moz-linear-gradient(top, #5e4aff, #3227b8);
+    background: linear-gradient(to bottom, #5e4aff, #3227b8);
+    -webkit-box-shadow: #7159ff 0px 0px 40px 0px;
+    -moz-box-shadow: #7159ff 0px 0px 40px 0px;
+    box-shadow: #7159ff 0px 0px 40px 0px;
+    text-shadow: #1e176d 1px 1px 1px;
+    font: normal normal bold 20px arial;
+    color: #ffffff;
+    text-decoration: none;
+    margin: 10px;
+  }
+  
+  .palabra-nueva, .botones-div-canvas{
+    padding: auto;
+    
+    margin: 15px;
+    text-align: center;
+  }
+  
+  .button2,.button-salir {
+    display: inline-block;
+    text-align: center;
+    vertical-align: middle;
+    padding: 12px 30px;
+    border: 0px solid #3227b8;
+    border-radius: 15px;
+    background: #5e4aff;
+    background: -webkit-gradient(linear, left top, left bottom, from(#5e4aff), to(#3227b8));
+    background: -moz-linear-gradient(top, #5e4aff, #3227b8);
+    background: linear-gradient(to bottom, #5e4aff, #3227b8);
+    -webkit-box-shadow: #7159ff 0px 0px 40px 0px;
+    -moz-box-shadow: #7159ff 0px 0px 40px 0px;
+    box-shadow: #7159ff 0px 0px 40px 0px;
+    text-shadow: #1e176d 1px 1px 1px;
+    font: normal normal bold 20px arial;
+    color: #ffffff;
+    text-decoration: none;
+  }
+  .button:hover,
+  .button:focus,.button-nuevo:hover,
+  .button-nuevo:focus,.button2:hover,
+  .button2:focus,.button-salir:hover,
+  .button-salir:focus {
+    border: 0px solid #3b2ed9;
+    background:7159ff;
+    background: -webkit-gradient(linear, left top, left bottom, from(#7159ff), to(#3c2fdd));
+    background: -moz-linear-gradient(top, #7159ff, #3c2fdd);
+    background: linear-gradient(to bottom, #7159ff, #3c2fdd);
+    color: #ffffff;
+    text-decoration: none;
+  }
+  .button:active, .button-nuevo:active,.button2:active,.button-salir:active {
+    background: #3227b8;
+    background: -webkit-gradient(linear, left top, left bottom, from(#3227b8), to(#3227b8));
+    background: -moz-linear-gradient(top, #3227b8, #3227b8);
+    background: linear-gradient(to bottom, #3227b8, #3227b8);
+  }
+  .button:after{
+    content:  "\0000a0";
+    display: inline-block;
+    height: 24px;
+    width: 24px;
+    line-height: 24px;
+    margin: 0 -4px -6px 4px;
+    position: relative;
+    top: 0px;
+    left: 6px;
+    background: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAACXBIWXMAAA7EAAAOxAGVKw4bAAACVklEQVRIiaWVMUhWURTHf/fxsO+cIyIfIdIUDWoQDQ1lThUOBZa011CQEdFU0CAREg4NDUJB0iQETiLlkhY0ZbY0NEhQhJMEOTj07pWw72t4z3rq8+N7X//p3nPvPb9z3rnnXQegJmeBGeAzrWk/MOqT8LxwVVVjNZlXk4FWvKvJiJqMFK3FAN77TVW5gWNWTZZK+P5Zc/W71PfeEG8NvA/f1GQYqGamUWAWWG4AmHS4tkYRxPmJT8IKsAKgJmvAsk/Cx70Oq4lv5BwgKjyo0g0cBI6LVuKiPc1qF0BNzuCYA+aBXufcvJhoq4Bt0anui4AHwLBPwmoGvOPgKvC4FcCODKI2gC3nmRaB3lac7wY4eoADanIKQEQi4BqgatL5XwA1GQQmgEfAuJpMu4jXQA34AsypSsMrWaR8DS6StvuimjwFeoD1eo3VEAJqcrju6AM+tQqIgV9q0u2T8J2swUQrsZhUgQ3qlL6yO69pBZjOG5xzRx2MlXW8FyAqsBXta1r5lGtAJxCrSRfwDHgPLABpozlqZQH5yKaA2xl0CHhHWngFBrM9pd+LvwCfhCXqnAM2Msh6No6Alz4Jl0MSNv4ng1ISlS7SH+KWTohIU4A2oAPYzOZV2P7tVTV2jim21/CCi7jUEBBFvz3wBjgNvCIt9C3S+vyTq4+R1uhrzvoQuKkmRwqCbl5qMqQmL9SkX01+SLto9ia/FZNjavJBtNJRmEETzg8B90kb7wmwlltud3AdmHDOTYpJBOBKAmaAfsADV4Bx0npVgXvASWAA6APO+yQs/AGEHoqWGVh5NQAAAABJRU5ErkJggg==") no-repeat left center transparent;
+    background-size: 100% 100%;
+  }
+  
+  .button-nuevo:after{
+    content:  "\0000a0";
+    display: inline-block;
+    height: 24px;
+    width: 24px;
+    line-height: 24px;
+    margin: 0 -4px -6px 4px;
+    position: relative;
+    top: 0px;
+    left: 6px;
+    background: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAACXBIWXMAAA7EAAAOxAGVKw4bAAAD+ElEQVRIib3TW2gcVRwG8G9mb7Oz2dvM7GyShuzWpon1ghFJbLHUraJSKS0+1bomFoUSCfjk9iHQB18CoouID2IeJCiB1kgTtYTipWoUWhElJoW2tDVJ3WxuO7O7s7Mzs7Nz8UEiSZPYTVv8v57D7+PPdw6BezAfPNN+nADcUx5+4KOzX+urz4i7gY+efJs7MH3u9HO7xKdonwO//1S6Pqo27X9v7PvMyh3H3eCdO5qGX3ixe39u8jr0uT/REnczwWXhUHhH+8jFazPSHQfQyRTd9Vjr6OOt8YQvEgW77zDKBgNh6g/EQyrDFQuHwjsfHbl4bUYi7wTnt+98PxLlEyzLwu/3QxRF0Hufh+/Yu8gIbtxXp7Y8aWS+2PIGdDJFU9u2pwNPHDg+rnmxpKjwlXIIez3IZDIIbovBtFwQLvyAOlNrYB7s/LHmDehkiqYaYml299M9VikPPujFJX8Mb8mNuHB1GizLQtd1+J89gmqgCWLVrWmE40pNG9DJFE1Fm9JMR6LHVmREGT9stxc51UQFJCYNLzqJIpob6zG/sICcJ6BMqcQb/Z+PjTtrwT2RxnTwkT09ppRHlA/DJF0QJQ0gCNimCZIi8dWcjKD7JiYvX1V+KZC9A5+eGQRu8w/oZIp2c/Xp4EMdPaio4HkGBOWDqFr/4JYJ1kvAkIoo5YtIUqKSXVzsHTj55uCKsWkAnUzRDFP3Idm2p9uuqIjwLAiKhqgYIFZw2oFqSYIoFqEJS9nyXzeOKkPvjK92NuzgtdcTHFkXHpXiew9bigSWCwEuN0RJhW2asPQKGA8BvZiHuCRAE5eyytz0OhwA1r2iiT64L5H3D8/W70uYkohgnQeWZUPIFWBVNJiqjKDTRCW/DGF+AZqwmFWysxviALCu5DkjfEx2hRJVYQFsPQ+zoiGfl0F4KIAgEPJT0As5FHJ5VMulrCYub4pvGPBAg31ksv07DM03In25A3OyDwRJgvB4EeLC0IsiissiDFXJVqT8f+LALSVP9KG5qaVxlm1mgHoXZmQaB0/txoIRQZBjYcOGlMvD0CvZarl0Wxy4pQOHg3w5RDsBWwPUMuKuHL48eB4cpcKs6ijOL4LSBMWnLb5SCw6sekUTfQAToD4J+V0hUAZgGYCiI6zL0AoavrkZhtcqKZ2OK72/fjx0phYcWNtBIuQl44aswOkkAcOGqQKmbuMl6jecc7JKAOXekYGzg7XiawLO36C6mgNVkBUDlgxUDBulqg21an4rV63hNHf6s/Z+FLaC/xsQjUZPjAkPv6pPTKJr1zJUEz+XTXvYtnGqvR9LW0XXDMdxZCwWm25ra7N5nj8x0QfursBNQlojkUj3PYf/j/kbssrGh4OFgzAAAAAASUVORK5CYII=") no-repeat left center transparent;
+    background-size: 100% 100%;
+  }
+  
+  .button2:after{
+    content:  "\0000a0";
+    display: inline-block;
+    height: 24px;
+    width: 24px;
+    line-height: 24px;
+    margin: 0 -4px -6px 4px;
+    position: relative;
+    top: 0px;
+    left: 6px;
+    background: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAACXBIWXMAAA7EAAAOxAGVKw4bAAACVklEQVRIiaWVMUhWURTHf/fxsO+cIyIfIdIUDWoQDQ1lThUOBZa011CQEdFU0CAREg4NDUJB0iQETiLlkhY0ZbY0NEhQhJMEOTj07pWw72t4z3rq8+N7X//p3nPvPb9z3rnnXQegJmeBGeAzrWk/MOqT8LxwVVVjNZlXk4FWvKvJiJqMFK3FAN77TVW5gWNWTZZK+P5Zc/W71PfeEG8NvA/f1GQYqGamUWAWWG4AmHS4tkYRxPmJT8IKsAKgJmvAsk/Cx70Oq4lv5BwgKjyo0g0cBI6LVuKiPc1qF0BNzuCYA+aBXufcvJhoq4Bt0anui4AHwLBPwmoGvOPgKvC4FcCODKI2gC3nmRaB3lac7wY4eoADanIKQEQi4BqgatL5XwA1GQQmgEfAuJpMu4jXQA34AsypSsMrWaR8DS6StvuimjwFeoD1eo3VEAJqcrju6AM+tQqIgV9q0u2T8J2swUQrsZhUgQ3qlL6yO69pBZjOG5xzRx2MlXW8FyAqsBXta1r5lGtAJxCrSRfwDHgPLABpozlqZQH5yKaA2xl0CHhHWngFBrM9pd+LvwCfhCXqnAM2Msh6No6Alz4Jl0MSNv4ng1ISlS7SH+KWTohIU4A2oAPYzOZV2P7tVTV2jim21/CCi7jUEBBFvz3wBjgNvCIt9C3S+vyTq4+R1uhrzvoQuKkmRwqCbl5qMqQmL9SkX01+SLto9ia/FZNjavJBtNJRmEETzg8B90kb7wmwlltud3AdmHDOTYpJBOBKAmaAfsADV4Bx0npVgXvASWAA6APO+yQs/AGEHoqWGVh5NQAAAABJRU5ErkJggg==") no-repeat left center transparent;
+    background-size: 100% 100%;
+  }
+  
+  
+  .button-salir:after{
+    content:  "\0000a0";
+    display: inline-block;
+    height: 24px;
+    width: 24px;
+    line-height: 24px;
+    margin: 0 -4px -6px 4px;
+    position: relative;
+    top: 0px;
+    left: 6px;
+    background: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAACXBIWXMAAA7EAAAOxAGVKw4bAAABwklEQVRIibVWu2rjQBQ9WnCbKuxHLH6pW7az0NomRUgZe4w9+hizH7HkN9IsqfMDIV1QH2Qb0gTPNTkpVhKSpRkpDrlwmzsz59w5987Dg9vOAFwA+A3gB4DvafwZwCOAfwBuAbw04NQCrwFsALDBdwD+pGta2S8AcQvgY4/TtU67AvB6AnjmrymGNfPPgBdJKjs5O1EWl1ylmqzrJvq+z/F4bAWaTqccDoe28XUx+0q3+L7P3W5HEeFyuawARFHEw+HA7XbLwWBQR7DJdnFdl0EYhhQRkqQxpkQSRVFpLAgC2y6uAeDGJoFSisYYkqSIUGudZ06S+/2e8/ncVYsbALh3FUwplWcrIjm4MaYJnCk2npq6YrFY5CQZkVKqTTc9fUML63Q68DyvEmthb40Saa1zWUSkJNdqtWolkbXIWutStyilSnIZY5pI/gKWNp1MJqVumc1m1u4Kw9DZprUHrd/vM0kSGmNK4EUSEWGSJOx2u86DBvy/zyuTer0eR6ORVYIgCGzgROGqyHYRNxTsIx6j5gH60us6s8tPkjgfnMx+nihX7Mr82D7y6G/gePS9uuARUfHbcp7GEwAPAO7Q8G15B5VPUktPDyCXAAAAAElFTkSuQmCC") no-repeat left center transparent;
+    background-size: 100% 100%;
+  }
+  
+  .video{
+    text-align: center;
+    padding: 50px;
+   }
+  
+  
+  .caja {
+    width: 940px;
+    position: relative;
+    margin: 0 auto;
+  }
+  
+  .img-alerta{
+  
+    width: 2pc;
+    height: 2pc;
+  }
+  
+  .titulo-principal {
+    font-size: 2em;
+    margin: 0 0 1em;
+    clear: left;
+    font-family: "Kaushan Script", cursive;
+    color: rgb(12, 52, 116);
+  }
+  
+  .contenedorDivs {
+    width: 100%;
+  }
+  
+  .contenedorDivs div {
+    padding: 1em;
+  }
+  
+  
+  footer {
+    text-align: center;
+  }
+  
+  .copyrigth, .caracter {
+    color: white;
+    font-size: 25px;
+    margin: 20px;
+    text-align: auto;
+    font-family: "Kaushan Script", cursive;
+  }
+  
+  
+  .canvas {
+    margin-left: 2.5rem;
+    width: 1024px;
+    /*height: 800px;*/
+    height: 900px;
+  }
+  
+  .botones-div-canvas {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+  
+    position: absolute;
+    width: 680px;
+    height: 67px;
+    left: 2.5rem;
+    top: 760px;
+    margin-bottom: 25px;
+    text-align:  center;
+  }
+  
+  .a{
+    text-align: center;
+  }
+  
+  .text-input{
+  border: 1px solid #DBE1EB;
+  font-size: 18px;
+  font-family: Arial, Verdana;
+  padding-left: 10px;
+  padding-right: 10px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  border-radius: 4px;
+  -moz-border-radius: 4px;
+  -webkit-border-radius: 4px;
+  -o-border-radius: 4px;
+  background: #FFFFFF;
+  background: linear-gradient(left, #FFFFFF, #F7F9FA);
+  background: -moz-linear-gradient(left, #FFFFFF, #F7F9FA);
+  background: -webkit-linear-gradient(left, #FFFFFF, #F7F9FA);
+  background: -o-linear-gradient(left, #FFFFFF, #F7F9FA);
+  color: #2E3133;
+  }
+  
+  .text-input:focus
+  {
+  color: #2E3133;
+  border-color: #FBFFAD;
+  }
+  
+  
+  
+  @media screen and (max-width: 480px) {
+    h1 {
+      text-align: center;
+    }
+  
+    nav {
+      position: static;
+    }
+  
+    .caja , video {
+      width: auto;
+      text-align: center;
+    }
+  
+    .div-desaparece{
+      text-align: center;
+    }
+    
+  
+    footer {
+      width: 1250px;
+    }
+  
+    .agregar-palabra{
+      text-align: center;
+      padding: 100px;
+    }
+    
+  }
+  

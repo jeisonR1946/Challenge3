@@ -1,0 +1,165 @@
+/* CSS Challenge Encriptador Grupo3 */
+
+body{
+    background-color: #f3f5fc;
+}
+
+.caja{
+    width: 940px;
+    position: relative;
+    margin: 0 auto;
+}
+
+/*CCS para titulo principal y parrafos*/
+
+.informacion{
+
+    width: 940px;
+    margin: 0 auto;
+    padding: 50px;
+
+}
+
+.titulo-principal{
+    font-size: 2em;
+    margin: 0 0 1em;
+    clear: left;
+    font-family: 'Kaushan Script', cursive;
+    color:rgb(12,52,116);
+}
+
+.contenedorDivs{
+    width: 100%;
+}
+
+.contenedorDivs div{
+    padding: 1em;
+}
+
+.informacion p strong{
+    font-weight: bold;
+}
+
+.informacion p{
+    margin: 0 0 2em;
+    color:rgb(12,52,116);
+}
+
+div label{
+    display: block;
+    font-size: 20px;
+    margin: 0 0 10px;
+    font-family: 'Kaushan Script', cursive;
+    color:rgb(12,52,116);
+}
+
+.imagenalura{
+    padding: 40px;
+    
+}
+
+nav{
+    position: absolute;
+    top: 110px;
+    right: 0;
+}
+
+nav li{
+    display: inline;
+    margin: 0 0 0 15px;
+    font-family: 'Kaushan Script', cursive;
+}
+
+nav a{
+    text-transform: uppercase;
+    color: rgb(33, 4, 162);
+    font-weight: bold;
+    font-size: 22px;
+    text-decoration: none;
+}
+
+nav a:hover{
+    color: rgb(12,52,116);
+    opacity: 0.7;
+}
+
+.input-padron{
+    display: block;
+    margin: 0 0 20px;
+    padding: 10px 20px;
+    width: 60%;
+    background: #f3f5fc;
+    border: none;
+}
+
+.input-desencriptado{
+    display: block;
+    margin: 0 0 20px;
+    padding: 10px 20px;
+    width: 60%;
+    height: 200px;
+    background: #f3f5fc;
+}
+
+.boton {
+    width: 14%;
+    padding: 10px 0;
+    font-size: 13px;
+    font-weight: bold;
+    color: white;
+    background: rgb(203, 138, 15);
+    border: none;
+    border-radius: 10px;
+    transition: 1s all;
+    cursor: pointer;
+    margin: 15px;
+}
+
+.boton:hover{
+
+    background-color: rgb(12,52,116);
+    transform: scale(1.1);
+    /*transform: scale(1.2) rotate(70deg);*/
+}
+
+footer{
+    text-align : center;
+    
+}
+
+.copyrigth{
+    color:rgb(12,52,116);
+    font-size: 25px;
+    margin: 20px;    
+    text-align: auto;    
+    font-family: 'Kaushan Script', cursive;
+
+}
+
+
+
+@media screen and (max-width:480px){
+    h1{
+        text-align: center;
+    }
+
+    nav{
+        position: static;
+    }
+
+   .caja{
+        width: auto;
+        text-align: center;
+   }
+
+   .contenedorDivs{
+    width: auto;
+    }
+
+    footer{
+        width: 940px
+    }    
+   
+}
+
+
