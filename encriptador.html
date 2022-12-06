@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+
+<html lang="es">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width">
+        <title>Encriptador Alura</title>
+        <link rel="stylesheet" href="css/ahorcado/reset.css">
+        <link rel="stylesheet" href="css/ahorcado/style.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Kaushan+Script&display=swap" rel="stylesheet">
+        <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+        
+
+    </head>
+
+    <body>
+
+        <header>
+            <div class="caja">
+                <h1><img src="imagenes/v1.png" alt="logo Alura" class="imagenalura"></h1>
+                <nav>
+                    <ul>
+                        <li><a href="encriptador.html">Restaurar</a></li>
+                    </ul>
+                </nav>
+            </div>               
+        </header>   
+
+        <main>
+            <section class="informacion">
+                <h3 class="titulo-principal">Encriptador Alura Grupo 3</h3>
+
+                <div class="contenedorDivs">
+                    <div>
+                        <p>A continuación, veremos el desarrollo del <strong> Challenge 1 del Grupo #3</strong>; se utilizó HTML5, CSS y JavaScript. En este programa podrás ingresar un texto y podrás Encriptarlo y Desencriptarlo, así como también copiar dicho texto para luego utilizarlo.
+                        </p>
+                        <p>Se utilizaron todos los recursos que se trabajaron durante el curso. Espero lo disfruten así como yo lo disfrute realizándolo.
+                        </p>
+                        <label for="titulo-principal">Mensaje a encriptar</label>
+                        <textarea cols="100%" rows="10" id="input-padron" class="input-padron" required placeholder="Ingrese su texto aqui"></textarea>
+                        <label for="">🌪 Solo letras minúsculas y sin acentos</label>
+                        <input type="button" value="Encriptar!" class="boton" id="boton-encriptar">
+                        <input type="button" value="Desencriptar!" class="boton" id="boton-desencriptar">
+                    </div>   
+                    <div class="copiar">
+                        <input type="text" id="input-desencriptado" class="input-desencriptado">
+                        <input type="button" value="Copiar" class="boton" id="boton-copiar">
+                    </div>           
+                </div>
+                               
+            </section>
+        </main>   
+        
+        <script src="js/script.js"></script>
+        
+        <footer>
+            <!-- <img src="imagenes/a_sinfondo.png" > -->
+            <p class="copyrigth">® Encriptador Alura - 2022 Elaborado por: Jeison Rubiano</p>            
+        </footer>   
+
+    </body>
+    
+
+</html>

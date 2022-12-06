@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>Juego Ahorcado ALURA</title>
+        <link rel="stylesheet" href="css/juego/reset_juego.css">
+        <link rel="stylesheet" href="css/juego/style_juego.css">
+        <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+    </head>
+    <body>
+        <header>
+                <h1> 
+                  <div class="video">
+                    <video autoplay="autoplay" loop="loop" muted defaultMuted playsinline  oncontextmenu="return false;"  preload="auto"  id="miVideo">
+                      <source src="img/Juego del ahorcado.mp4" type="video/mp4">
+                      <source src="img/Juego del ahorcado.webm" type="video/webm">
+                      </video>
+                  </div>                 
+                </h1>
+            </div>                    
+        </header>
+        <main>
+            <div id="div-desaparece" class="botones-home">
+                <a href="#forca">
+                  <!-- Buton/input -->
+       
+                  <a class="button" type="submit" value="Iniciar Juego" id="iniciar-juego" onclick="iniciarJuego()">Iniciar Juego</a>
+                  <a class="button-nuevo" type="submit" value="Ingresar Palabra" id="ingresar-palabra" onclick="ingresarPalabra()">Ingresar Palabra</a>
+                </a>
+              </div>
+              <div id="agregar-palabra" class="palabra-nueva">
+                <input class="text-input" type="text" id="input-nueva-palavra"  maxlength="8" placeholder="Escriba una nueva palabra">
+                <div class="form-group">
+                  <img src="img/alerta.png" class="img-alerta" >
+                  <label for="input-texto" class="caracter"> Máx. 8 caracteres</label>
+                </div>
+                <div class="botones-div">
+                  <a class="button" type="submit" value="Guardar Palabra" id="guardar-palabra" onclick="guardarPalabra()">Guardar y empezar</a>
+                  <a class="button-salir" type="submit" value="Salir Juego" id="salir-juego-agregar" href="javascript:location.reload()">Salir</a>
+                </div> 
+              </div>
+        
+            <div id="div-aparece-ahorcado" class="canvas">
+              <!-- Canvas -->
+              <canvas id="forca" width="1200" height="860"></canvas>
+              
+              <div class="botones-div-canvas">
+                <div class="a">
+
+                  <a class="button2" type="submit" value="Iniciar Juego" id="iniciar-juego2" onclick="iniciarJuego()">Nuevo Juego</a>
+                  <a class="button-salir" type="submit" value="Salir Juego" id="salir-juego" href="javascript:location.reload()">Salir</a>
+                </div>
+         
+              </div>
+            </div>
+
+        </main>
+         <!-- Aca inicia JavaScript -->
+        <script src="js/horca.js"></script>
+        <script src="js/canvas.js"></script>
+          
+        <footer>
+            <!-- <img src="imagenes/a_sinfondo.png" > -->
+            <p class="copyrigth">® Juego del Ahorcado Alura - 2022 Elaborado por: Jeison Rubiano</p>            
+        </footer>  
+    </body>
+</html>
